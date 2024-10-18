@@ -1,6 +1,6 @@
-package com.example.hexagonal.infrastructure.adapter.orm;
+package com.example.hexagonal.infrastructure.adapter.orm.pharmacy;
 
-import com.example.hexagonal.domain.Pharmacy;
+import com.example.hexagonal.domain.pharmacy.Pharmacy;
 import org.springframework.stereotype.Service;
 
 

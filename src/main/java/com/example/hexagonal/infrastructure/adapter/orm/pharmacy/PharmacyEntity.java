@@ -1,4 +1,4 @@
-package com.example.hexagonal.infrastructure.adapter.orm;
+package com.example.hexagonal.infrastructure.adapter.orm.pharmacy;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

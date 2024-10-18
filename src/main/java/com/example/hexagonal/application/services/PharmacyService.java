@@ -1,7 +1,7 @@
 package com.example.hexagonal.application.services;
 
 import com.example.hexagonal.application.repositories.PharmacyRepository;
-import com.example.hexagonal.domain.Pharmacy;
+import com.example.hexagonal.domain.pharmacy.Pharmacy;
 import org.springframework.stereotype.Service;
 
 @Service

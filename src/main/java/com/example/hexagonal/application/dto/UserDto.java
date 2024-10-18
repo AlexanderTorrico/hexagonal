@@ -1,15 +1,15 @@
-package com.example.hexagonal.domain;
+package com.example.hexagonal.application.dto;
 
-public class Pharmacy {
+public class UserDto {
 
     private long id;
     private String name;
-    private String address;
+    private String email;
 
-    public Pharmacy(long id, String name, String address) {
+    public UserDto(long id, String name, String email) {
         this.id = id;
         this.name = name;
-        this.address = address;
+        this.email = email;
     }
 
     public long getId() {
@@ -28,11 +28,11 @@ public class Pharmacy {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
