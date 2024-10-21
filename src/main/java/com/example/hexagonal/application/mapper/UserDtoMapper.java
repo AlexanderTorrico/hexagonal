@@ -1,7 +1,7 @@
 package com.example.hexagonal.application.mapper;
 
 import com.example.hexagonal.application.dto.UserDto;
-import com.example.hexagonal.domain.user.User;
+import com.example.hexagonal.domain.model.user.User;
 
 public class UserDtoMapper {
 

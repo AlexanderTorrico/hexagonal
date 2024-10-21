@@ -1,4 +1,4 @@
-package com.example.hexagonal.domain.pharmacy;
+package com.example.hexagonal.domain.model.pharmacy;
 
 public class Pharmacy {
 

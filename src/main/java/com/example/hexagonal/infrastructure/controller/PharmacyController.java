@@ -2,7 +2,7 @@ package com.example.hexagonal.infrastructure.controller;
 
 
 import com.example.hexagonal.application.services.PharmacyService;
-import com.example.hexagonal.domain.pharmacy.Pharmacy;
+import com.example.hexagonal.domain.model.pharmacy.Pharmacy;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,6 +1,6 @@
 package com.example.hexagonal.infrastructure.adapter.orm.user;
 
-import com.example.hexagonal.domain.user.User;
+import com.example.hexagonal.domain.model.user.User;
 import org.springframework.stereotype.Service;
 
 @Service

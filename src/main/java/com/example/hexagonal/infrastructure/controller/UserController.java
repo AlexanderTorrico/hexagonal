@@ -3,7 +3,7 @@ package com.example.hexagonal.infrastructure.controller;
 
 import com.example.hexagonal.application.dto.UserDto;
 import com.example.hexagonal.application.services.UserService;
-import com.example.hexagonal.domain.user.User;
+import com.example.hexagonal.domain.model.user.User;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

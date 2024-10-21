@@ -1,7 +1,7 @@
 package com.example.hexagonal.infrastructure.adapter.orm.pharmacy;
 
 import com.example.hexagonal.application.repositories.PharmacyRepository;
-import com.example.hexagonal.domain.pharmacy.Pharmacy;
+import com.example.hexagonal.domain.model.pharmacy.Pharmacy;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

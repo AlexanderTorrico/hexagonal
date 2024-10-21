@@ -1,4 +1,4 @@
-package com.example.hexagonal.domain.user.valueObject;
+package com.example.hexagonal.domain.model.user.valueObject;
 
 public class UserPasswordValue {
 

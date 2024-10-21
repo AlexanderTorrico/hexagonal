@@ -1,7 +1,7 @@
-package com.example.hexagonal.domain.user;
+package com.example.hexagonal.domain.model.user;
 
-import com.example.hexagonal.domain.user.valueObject.UserEmailValue;
-import com.example.hexagonal.domain.user.valueObject.UserPasswordValue;
+import com.example.hexagonal.domain.model.user.valueObject.UserEmailValue;
+import com.example.hexagonal.domain.model.user.valueObject.UserPasswordValue;
 
 public class User {
 
