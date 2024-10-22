@@ -13,7 +13,6 @@ import java.sql.Date;
 @Entity
 @Getter
 @Setter
-
 @Table(name = "users")
 public class UserEntity {
 
@@ -30,18 +29,18 @@ public class UserEntity {
     @Column
     private String password;
 
-    @Column
-    private long pharmacy_id;
-
     public UserEntity() {
     }
 
-    public UserEntity(long id, String name, String email, String password, long pharmacy_id) {
+    public UserEntity(long id, String name, String email, String password) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
-        this.pharmacy_id = pharmacy_id;
     }
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private PharmacyEntity pharmacyEntity;
+
 
 }

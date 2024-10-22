@@ -7,6 +7,7 @@ import com.example.hexagonal.domain.model.configuration.Configuration;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
 
 
 @AllArgsConstructor
@@ -18,10 +19,20 @@ public class ConfigurationRepositoryAdapter implements ConfigurationRepository {
     @Override
     public Configuration getPasswordLevel() {
 
-        ConfigurationEntity configPasswordLevel = configurationRepositoryJpa.findById(
+        Optional<ConfigurationEntity> optConfigPasswordLevel = configurationRepositoryJpa.findById(
                 ConfigurationKeyEnum.CONFIG_PASSWORD_LEVEL.toString()
-        ).get();
-        return configurationMapper.toDomain(configPasswordLevel);
+        );
+
+        //Agrega la configuración de rigurosidad de contraseña si no existe
+        if (!optConfigPasswordLevel.isPresent()) {
+            ConfigurationEntity configPasswordLevel = new ConfigurationEntity();
+            configPasswordLevel.setIdString(ConfigurationKeyEnum.CONFIG_PASSWORD_LEVEL.toString());
+            configPasswordLevel.setData(ConfigurationValuePasswordLevelEnum.MEAK_PASSWORD.toString());
+            configurationRepositoryJpa.save(configPasswordLevel);
+
+            return configurationMapper.toDomain(configPasswordLevel);
+        }
+        return configurationMapper.toDomain(optConfigPasswordLevel.get());
 
     }
 }

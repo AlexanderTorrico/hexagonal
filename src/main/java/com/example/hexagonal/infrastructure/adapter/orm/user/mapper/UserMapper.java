@@ -1,6 +1,7 @@
-package com.example.hexagonal.infrastructure.adapter.orm.user;
+package com.example.hexagonal.infrastructure.adapter.orm.user.mapper;
 
 import com.example.hexagonal.domain.model.user.User;
+import com.example.hexagonal.infrastructure.adapter.orm.user.UserEntity;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -11,8 +12,7 @@ public class UserMapper {
                 user.getId(),
                 user.getName(),
                 user.getEmail(),
-                user.getPassword(),
-                user.getPharmacy_id()
+                user.getPassword()
         );
     }
 
@@ -21,8 +21,7 @@ public class UserMapper {
                 userEntity.getId(),
                 userEntity.getName(),
                 userEntity.getEmail(),
-                userEntity.getPassword(),
-                userEntity.getPharmacy_id()
+                userEntity.getPassword()
         );
     }
 }

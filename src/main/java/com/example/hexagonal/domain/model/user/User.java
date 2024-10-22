@@ -16,10 +16,17 @@ public class User {
     public User() {
     }
 
-    public User(long id, String name, String email, String password, long pharmacy_id) {
+    public User(long id, String name, String email, String password) {
         this.id = id;
         this.name = name;
         this.email = new UserEmailValue(email);
+        this.password = password;
+    }
+
+    public User(long id, String name, UserEmailValue email, String password, long pharmacy_id) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
         this.password = password;
         this.pharmacy_id = pharmacy_id;
     }
