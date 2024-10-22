@@ -1,6 +1,7 @@
 package com.example.hexagonal.infrastructure.adapter.orm.user;
 
 
+import com.example.hexagonal.infrastructure.adapter.orm.pharmacy.PharmacyEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,7 +14,6 @@ import java.sql.Date;
 @Getter
 @Setter
 
-@NoArgsConstructor
 @Table(name = "users")
 public class UserEntity {
 
@@ -33,6 +33,9 @@ public class UserEntity {
     @Column
     private long pharmacy_id;
 
+    public UserEntity() {
+    }
+
     public UserEntity(long id, String name, String email, String password, long pharmacy_id) {
         this.id = id;
         this.name = name;
@@ -40,4 +43,5 @@ public class UserEntity {
         this.password = password;
         this.pharmacy_id = pharmacy_id;
     }
+
 }

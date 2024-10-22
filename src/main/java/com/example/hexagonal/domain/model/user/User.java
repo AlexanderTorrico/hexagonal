@@ -9,7 +9,7 @@ public class User {
     private String name;
 
     private UserEmailValue email;
-    private UserPasswordValue password;
+    private String password;
 
     private long pharmacy_id;
 
@@ -20,7 +20,7 @@ public class User {
         this.id = id;
         this.name = name;
         this.email = new UserEmailValue(email);
-        this.password = new UserPasswordValue(password);
+        this.password = password;
         this.pharmacy_id = pharmacy_id;
     }
 
@@ -49,11 +49,11 @@ public class User {
     }
 
     public String getPassword() {
-        return password.getValue();
+        return password;
     }
 
     public void setPassword(String password) {
-        this.password = new UserPasswordValue(password);
+        this.password = password;
     }
 
     public long getPharmacy_id() {
