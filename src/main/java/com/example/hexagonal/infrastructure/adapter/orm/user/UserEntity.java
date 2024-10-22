@@ -40,6 +40,7 @@ public class UserEntity {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "pharmacy_id")
     private PharmacyEntity pharmacyEntity;
 
 

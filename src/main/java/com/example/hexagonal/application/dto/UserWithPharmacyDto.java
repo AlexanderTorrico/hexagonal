@@ -4,13 +4,13 @@ public class UserWithPharmacyDto {
     private long id;
     private String name;
     private String email;
-    private PharmacyDto pharmacyDto;
+    private PharmacyDto pharmacy;
 
     public UserWithPharmacyDto(long id, String name, String email, PharmacyDto pharmacyDto) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.pharmacyDto = pharmacyDto;
+        this.pharmacy = pharmacyDto;
     }
 
     public UserWithPharmacyDto() {
@@ -41,10 +41,10 @@ public class UserWithPharmacyDto {
     }
 
     public PharmacyDto getPharmacyDto() {
-        return pharmacyDto;
+        return pharmacy;
     }
 
     public void setPharmacyDto(PharmacyDto pharmacyDto) {
-        this.pharmacyDto = pharmacyDto;
+        this.pharmacy = pharmacyDto;
     }
 }
