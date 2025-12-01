@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexagonal Architecture - Welcome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #ffffff;
+        }
+
+        .container {
+            text-align: center;
+            padding: 60px;
+            max-width: 800px;
+        }
+
+        .hexagon-container {
+            margin-bottom: 40px;
+        }
+
+        .hexagon {
+            width: 120px;
+            height: 69px;
+            background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+            position: relative;
+            margin: 35px auto;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hexagon::before,
+        .hexagon::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+        }
+
+        .hexagon::before {
+            bottom: 100%;
+            border-bottom: 34.6px solid #e94560;
+        }
+
+        .hexagon::after {
+            top: 100%;
+            border-top: 34.6px solid #ff6b6b;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        h1 span {
+            font-weight: 700;
+            background: linear-gradient(135deg, #e94560, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #a0a0a0;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            width: 200px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #e94560;
+        }
+
+        .feature p {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+            line-height: 1.5;
+        }
+
+        .status {
+            margin-top: 50px;
+            padding: 15px 30px;
+            background: rgba(46, 204, 113, 0.2);
+            border: 1px solid #2ecc71;
+            border-radius: 50px;
+            display: inline-block;
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #2ecc71;
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .footer {
+            margin-top: 60px;
+            color: #606060;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hexagon-container">
+            <div class="hexagon"></div>
+        </div>
+
+        <h1>Welcome to <span>Hexagonal</span></h1>
+        <p class="subtitle">Clean Architecture for Modern Applications</p>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">&#x1F3DB;</div>
+                <h3>Domain</h3>
+                <p>Core business logic isolated and protected</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#x1F504;</div>
+                <h3>Ports</h3>
+                <p>Interfaces defining system boundaries</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#x1F50C;</div>
+                <h3>Adapters</h3>
+                <p>Flexible implementations for external systems</p>
+            </div>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            Application is running
+        </div>
+
+        <div class="footer">
+            <p>Spring Boot Application &bull; Hexagonal Architecture</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -11,13 +11,13 @@ public class UserPasswordValue {
 
     public void validatePassword(String value) {
         if (!minLength(value)) {
-            throw new IllegalArgumentException("Password must have at least 8 characters");
+            throw new IllegalArgumentException("--Password must have at least 8 characters");
         }
         if (!hasUppercase(value)) {
-            throw new IllegalArgumentException("Password must have at least one uppercase letter");
+            throw new IllegalArgumentException("--Password must have at least one uppercase letter");
         }
         if (!hasLowercase(value)) {
-            throw new IllegalArgumentException("Password must have at least one lowercase letter");
+            throw new IllegalArgumentException("--Password must have at least one lowercase letter");
         }
     }
 

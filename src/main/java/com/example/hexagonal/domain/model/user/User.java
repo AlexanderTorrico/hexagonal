@@ -52,9 +52,6 @@ public class User {
         return password.getValue();
     }
 
-    public void setPassword(String password) {
-        this.password = new UserPasswordValue(password);
-    }
 
     public long getPharmacy_id() {
         return pharmacy_id;
