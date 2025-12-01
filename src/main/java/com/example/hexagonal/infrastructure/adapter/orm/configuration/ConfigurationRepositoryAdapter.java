@@ -16,6 +16,7 @@ public class ConfigurationRepositoryAdapter implements ConfigurationRepository {
     private final ConfigurationRepositoryJpa configurationRepositoryJpa;
     private ConfigurationMapper configurationMapper;
 
+
     @Override
     public Configuration getPasswordLevel() {
 
