@@ -4,7 +4,7 @@ import com.example.hexagonal.domain.model.configuration.Configuration;
 import org.springframework.stereotype.Service;
 
 
-@Service
+
 public class ConfigurationMapper {
 
     public ConfigurationEntity toEntity(Configuration configuration) {

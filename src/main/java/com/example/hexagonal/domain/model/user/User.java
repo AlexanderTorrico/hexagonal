@@ -24,6 +24,14 @@ public class User {
         this.pharmacy_id = pharmacy_id;
     }
 
+    public User(long id, String name, UserEmailValue email, String password, long pharmacy_id) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = new UserPasswordValue(password);
+        this.pharmacy_id = pharmacy_id;
+    }
+
     public long getId() {
         return id;
     }
@@ -52,6 +60,9 @@ public class User {
         return password.getValue();
     }
 
+    public void setPassword(String password) {
+        this.password = new UserPasswordValue(password);
+    }
 
     public long getPharmacy_id() {
         return pharmacy_id;
