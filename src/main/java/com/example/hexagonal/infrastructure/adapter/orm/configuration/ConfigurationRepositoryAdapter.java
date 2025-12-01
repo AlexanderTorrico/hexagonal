@@ -12,6 +12,7 @@ import java.util.Optional;
 
 @AllArgsConstructor
 
+
 public class ConfigurationRepositoryAdapter implements ConfigurationRepository {
     private final ConfigurationRepositoryJpa configurationRepositoryJpa;
     private ConfigurationMapper configurationMapper;
